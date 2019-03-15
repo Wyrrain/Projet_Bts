@@ -1,0 +1,125 @@
+package com.example.application30;
+import android.content.Intent;
+import android.nfc.NdefMessage;
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
+import android.nfc.tech.MifareUltralight;
+import android.nfc.tech.Ndef;
+import android.nfc.tech.NfcV;
+import android.nfc.tech.NfcV;
+import android.os.Parcelable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
+
+public class NFCScan extends AppCompatActivity {
+
+    public static final String TAG = NFCScan.class.getSimpleName();
+
+    private TextView mTextView;
+    private NfcAdapter mNfcAdapter;
+    private static TextView mNFCScan;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+
+        setContentView(R.layout.activity_nfcscan);
+
+        mNFCScan = findViewById(R.id.NFCCard);
+
+        mTextView = findViewById(R.id.explanaition2);
+
+        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+
+
+
+        if (mNfcAdapter == null) {
+            // Stop here, we definitely need NFC
+            // Toast.makeText(this, "", Toast.LENGTH_SHORT).show();Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+
+        }
+
+        if (!mNfcAdapter.isEnabled()) {
+            mTextView.setText("NFC is disabled.");
+        } else {
+            mTextView.setText("NFC is enable");
+            //NFCScan.readTag();
+
+        }
+    }
+    byte status = payload[0];
+    int enc = status & 0x80; // Bit mask 7th bit 1
+    String encString = null;
+if (enc == 0)
+    encString = "UTF-8";
+else
+    encString = "UTF-16";
+
+
+
+   /* public static void writeTag(Tag tag, String tagText) {
+            Ndef ndef= Ndef.get(tag);
+            try {
+                ndef.connect();
+                ndef.writeNdefMessage("ad");
+                ndef.writeNdefMessage(5, "efgh".getBytes(Charset.forName("US-ASCII")));
+                ndef.writeNdefMessage(6, "ijkl".getBytes(Charset.forName("US-ASCII")));
+                ndef.writeNdefMessage(7, "mnop".getBytes(Charset.forName("US-ASCII")));
+            } catch (IOException e) {
+                Log.e(TAG, "IOException while writing MifareUltralight...", e);
+            } finally {
+                try {
+                    ultralight.close();
+                } catch (IOException e) {
+                    Log.e(TAG, "IOException while closing MifareUltralight...", e);
+                }
+            }
+        }*/
+
+       /* public static String readTag(Tag tag) {
+            Ndef ndef = Ndef.get(tag);
+            try {
+                ndef.connect();
+                NdefMessage[] payload = ndef.getNdefMessage(getIntent());
+                return new String(payload, Charset.forName("US-ASCII"));
+            } catch (IOException e) {
+                mNFCScan.setText(Log.e(TAG, "IOException while reading MifareUltralight message...", e));
+            } finally {
+                if (ndef != null) {
+                    try {
+                        ndef.close();
+                    } catch (IOException e) {
+                        mNFCScan.setText(Log.e(TAG, "Error closing tag...", e));
+
+                    }
+                }
+            }
+            return null;
+        }*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
