@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Application3.0</string>
     <string name="todo">TODO</string>
@@ -9,8 +8,4 @@
     <string name="avez_vous_oubli_votre_mot_de_passe">avez_vous_oubli_votre_mot_de_passe</string>
     <string name="avez_vous_oublie_votre_mot_de_passe">avez vous oublie votre mot de passe</string>
     <string name="explanation" />
-    <string name="take_barcode_picture">Take Barcode Picture</string>
-    <string name="scan_barcode">Scan Barcode</string>
-    <string name="open_camera">OPEN CAMERA</string>
-    <string name="send_email">SEND EMAIL</string>
 </resources>

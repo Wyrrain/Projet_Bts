@@ -12,14 +12,8 @@ import android.widget.EditText;
 import com.example.application30.InterfaceNFCQR;
 import android.widget.TextView;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
     private Button Info;
@@ -31,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
 
         Email = (EditText) findViewById(R.id.emailText);
         Password = (EditText) findViewById(R.id.mdpText);
@@ -80,32 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    Button btnTakePicture, btnScanBarcode;
-
-
-
-    private void initViews() {
-        btnTakePicture = findViewById(R.id.btnTakePicture);
-        btnScanBarcode = findViewById(R.id.btnScanBarcode);
-        btnTakePicture.setOnClickListener(this);
-        btnScanBarcode.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.btnTakePicture:
-                startActivity(new Intent(MainActivity.this, PictureBarcodeActivity.class));
-                break;
-            case R.id.btnScanBarcode:
-                startActivity(new Intent(MainActivity.this, ScannedBarcodeActivity.class));
-                break;
-        }
-
-    }
 }
-
 
 
 
