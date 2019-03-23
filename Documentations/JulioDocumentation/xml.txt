@@ -1,0 +1,60 @@
+RES>VALUES>STRINGS
+<resources>
+    <string name="app_name">Application3.0</string>
+    <string name="todo">TODO</string>
+    <string name="l_objet_ne_possede_pas_un_tag">L\'Objet ne possede pas un TAG ?</string>
+    <string name="login">login</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="avez_vous_oubli_votre_mot_de_passe">avez_vous_oubli_votre_mot_de_passe</string>
+    <string name="avez_vous_oublie_votre_mot_de_passe">avez vous oublie votre mot de passe</string>
+    <string name="explanation" />
+    <string name="NFCCard">TextView</string>
+    <string name="explanation2">explanation</string>
+    <string name="show_detected_nfc">Show Detected NFC</string>
+</resources>
+
+activity_nfcscan.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NFCScan">
+
+    <TextView
+        android:id="@+id/explanaition2"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/explanation2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <TextView
+        android:id="@+id/NFCCard"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
+
+
