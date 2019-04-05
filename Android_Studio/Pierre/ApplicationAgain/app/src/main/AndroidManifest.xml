@@ -20,7 +20,7 @@
 
         <activity android:name=".NFCScan"/>
         <activity android:name=".InterfaceNFCQR"/>
-        <activity android:name=".ScannedBarcodeActivity"/>
+        <activity android:name=".CameraActivity"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
