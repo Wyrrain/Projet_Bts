@@ -1,12 +1,16 @@
 package com.example.application30;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.application30.InterfaceNFCQR;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Email = findViewById(R.id.emailText);
-        Password = findViewById(R.id.mdpText);
-        Info = findViewById(R.id.btnOublie);
-        Login = findViewById(R.id.loginBtn);
+        Email = (EditText) findViewById(R.id.emailText);
+        Password = (EditText) findViewById(R.id.mdpText);
+        Info = (Button) findViewById(R.id.btnOublie);
+        Login = (Button) findViewById(R.id.loginBtn);
 
         Login.setOnClickListener(new View.OnClickListener() {
 
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword) {
-        if ((userName.equals("")) && (userPassword.equals(""))) {
+        if ((userName.equals("Admin")) && (userPassword.equals("12345"))) {
             Intent intent = new Intent(MainActivity.this, InterfaceNFCQR.class);
             startActivity(intent);
         } else {

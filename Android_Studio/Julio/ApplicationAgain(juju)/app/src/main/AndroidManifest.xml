@@ -2,11 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.application30">
-
     <uses-permission android:name="android.permission.NFC" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-sdk android:minSdkVersion="16" />
 
 
     <application
@@ -18,26 +15,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".NFCScan"/>
-        <activity android:name=".InterfaceNFCQR"/>
-        <activity android:name=".CameraActivity"/>
-
+        <activity android:name=".NFCScan"></activity>
+        <activity android:name=".InterfaceNFCQR" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="application/com.example.application30"  />
+                    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="application/com.example.application30"  />
 
 
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.android.gms.vision.DEPENDENCIES"
-            android:value="barcode"/>
 
     </application>
 

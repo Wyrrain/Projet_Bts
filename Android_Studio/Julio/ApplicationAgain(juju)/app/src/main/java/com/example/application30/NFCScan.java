@@ -15,6 +15,7 @@ public class NFCScan extends AppCompatActivity {
     public static final String TAG = "NfcDemo";
 
     private TextView mTextView;
+    private NfcAdapter mNfcAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class NFCScan extends AppCompatActivity {
 
         mTextView = findViewById(R.id.textView_explanation);
 
-        NfcAdapter mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
         if (mNfcAdapter == null) {
             // Stop here, we definitely need NFC
