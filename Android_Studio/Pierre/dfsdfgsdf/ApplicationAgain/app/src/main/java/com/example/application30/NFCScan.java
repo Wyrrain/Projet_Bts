@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Arrays;
+
 public class NFCScan extends AppCompatActivity {
 
 
@@ -52,6 +54,7 @@ public class NFCScan extends AppCompatActivity {
 
         //handleIntent(getIntent());
     }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -111,7 +114,7 @@ public class NFCScan extends AppCompatActivity {
 
             currentTag = (Tag) intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
-                //readTagData(currentTag);
+            readTagData(currentTag);
 
 
         } else {
@@ -122,15 +125,15 @@ public class NFCScan extends AppCompatActivity {
     }
 
 
-   /*private String readTagData(Tag tag) {
+    private void readTagData(Tag tag) {
+
 
         byte[] id = tag.getId();
-        //txtTag.setText(Arrays.toString(id));
-        private String bytesToHexString(byte[] id) {
-            StringBuilder stringBuilder = new StringBuilder("0x");
-            if (id == null || id.length <= 0) {
-                return null;
-            }
+        txtTag.setText(Arrays.toString(id));
+
+        StringBuilder stringBuilder = new StringBuilder("0x");
+        if (id == null || id.length <= 0) {
+
 
             char[] buffer = new char[2];
             for (int i = 0; i < id.length; i++) {
@@ -139,11 +142,9 @@ public class NFCScan extends AppCompatActivity {
                 System.out.println(buffer);
                 stringBuilder.append(buffer);
             }
-
-            return stringBuilder.toString();
         }
 
-    }*/
+    }
 }
 
 
