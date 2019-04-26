@@ -7,6 +7,8 @@
     <string name="email">email</string>
     <string name="avez_vous_oubli_votre_mot_de_passe">avez_vous_oubli_votre_mot_de_passe</string>
     <string name="avez_vous_oublie_votre_mot_de_passe">avez vous oublie votre mot de passe</string>
-    <string name="explanation" />
+    <string name="explanation">explanation</string>
     <string name="viser_le_qr_code">Viser le QR Code</string>
+    <string name="Emprunter">Emprunter</string>
+    <string name="TextView">TextView</string>
 </resources>

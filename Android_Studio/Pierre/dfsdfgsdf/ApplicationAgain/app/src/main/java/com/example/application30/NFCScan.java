@@ -21,10 +21,22 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
@@ -33,15 +45,12 @@ import java.util.Locale;
 public class NFCScan extends AppCompatActivity {
 
 
-    private boolean tagReaded;
     NfcAdapter nfcAdapter;
-    ToggleButton tglReadWrite;
     private TextView txtTag;
-    EditText txtTagContent;
+    private TextView mTextViewResult;
+    private RequestQueue mQueue;
 
     public static final String TAG = "NfcDemo";
-
-    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +58,62 @@ public class NFCScan extends AppCompatActivity {
         setContentView(R.layout.activity_nfcscan);
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        tglReadWrite = (ToggleButton)findViewById(R.id.tglReadWrite);
-        txtTagContent = (EditText)findViewById(R.id.txtTagContent);
+        txtTag = findViewById(R.id.txtTag);
+        mTextViewResult = findViewById(R.id.text_view_result);
+        Button buttonEmprunter = findViewById(R.id.button_emprunter);
 
-        if(nfcAdapter!=null) {
-            //Toast.makeText(this, "NFC disponible sur ce Smartphone !", Toast.LENGTH_LONG).show();
-        }
+        mQueue = Volley.newRequestQueue(this);
+
+        buttonEmprunter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jsonParse();
+            }
+        });
+
+    }
+
+    private void jsonParse() {
+        String url = "https://api.json.com/bins/kp9wz";
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("employees");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject employee = jsonArray.getJSONObject(i);
+
+                                String firstName = employee.getString("firstname");
+                                int age = employee.getInt("age");
+                                String mail = employee.getString("mail");
+
+                                mTextViewResult.append(firstName + ',' + age + ", " + mail + "\n\n");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        mQueue.add(request);
+
+    }
+
+    if(nfcAdapter!=null) {
+        //Toast.makeText(this, "NFC disponible sur ce Smartphone !", Toast.LENGTH_LONG).show();
+    }
         else {
-            Toast.makeText(this, "NFC indisponible sur ce Smartphone...", Toast.LENGTH_LONG).show();
-            //finish();
-        }
+        Toast.makeText(this, "NFC indisponible sur ce Smartphone...", Toast.LENGTH_LONG).show();
+        //finish();
+
     }
 
     @Override
@@ -98,8 +153,6 @@ public class NFCScan extends AppCompatActivity {
 
         if(intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
             Toast.makeText(this, "NFC intent!", Toast.LENGTH_LONG).show();
-
-            if(tglReadWrite.isChecked())
             {
                 Parcelable[] parcelables = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
@@ -126,7 +179,7 @@ public class NFCScan extends AppCompatActivity {
 
             String tagContent = getTextFromNdefRecord(ndefRecord);
 
-            txtTagContent.setText(tagContent);
+            txtTag.setText(tagContent);
         }
         else {
 
@@ -168,16 +221,12 @@ public class NFCScan extends AppCompatActivity {
 
             tagContent = new String(payload, languageSize + 1, payload.length - languageSize - 1, textEncoding);
 
-        }catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException e) {
             Log.e("getTextFromNdef", e.getMessage(), e);
         }
 
         return tagContent;
     }
-
-
-
-
 
 }
 
