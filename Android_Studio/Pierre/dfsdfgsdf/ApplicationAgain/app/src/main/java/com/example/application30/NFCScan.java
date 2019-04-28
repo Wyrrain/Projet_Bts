@@ -71,10 +71,15 @@ public class NFCScan extends AppCompatActivity {
             }
         });
 
+        if(nfcAdapter == null) {
+            Toast.makeText(this, "NFC indisponible sur ce Smartphone", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
     }
 
     private void jsonParse() {
-        String url = "https://api.json.com/bins/kp9wz";
+        String url = "https://api.myjson.com/bins/irrr8";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -107,14 +112,6 @@ public class NFCScan extends AppCompatActivity {
 
     }
 
-    if(nfcAdapter!=null) {
-        //Toast.makeText(this, "NFC disponible sur ce Smartphone !", Toast.LENGTH_LONG).show();
-    }
-        else {
-        Toast.makeText(this, "NFC indisponible sur ce Smartphone...", Toast.LENGTH_LONG).show();
-        //finish();
-
-    }
 
     @Override
     protected void onResume() {
@@ -122,7 +119,6 @@ public class NFCScan extends AppCompatActivity {
         super.onResume();
 
         if (!nfcAdapter.isEnabled()) {
-            //Toast.makeText(getApplicationContext(), "Vous devez activer la fonction NFC de votre smartphone pour utiliser cette application.", Toast.LENGTH_LONG).show();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(NFCScan.this);
             builder.setTitle("NFC est désactivé");
@@ -227,7 +223,6 @@ public class NFCScan extends AppCompatActivity {
 
         return tagContent;
     }
-
 }
 
 
