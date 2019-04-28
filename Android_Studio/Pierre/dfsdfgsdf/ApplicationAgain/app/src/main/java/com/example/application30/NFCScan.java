@@ -95,7 +95,7 @@ public class NFCScan extends AppCompatActivity {
                                 int age = employee.getInt("age");
                                 String mail = employee.getString("mail");
 
-                                mTextViewResult.append(firstName + ',' + age + ", " + mail + "\n\n");
+                                mTextViewResult.append(firstName + ",\n" + age + " ans,\n" + mail + "\n\n");
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -148,7 +148,7 @@ public class NFCScan extends AppCompatActivity {
         super.onNewIntent(intent);
 
         if(intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
-            Toast.makeText(this, "NFC intent!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Tag Scanné!", Toast.LENGTH_LONG).show();
             {
                 Parcelable[] parcelables = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
