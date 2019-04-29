@@ -78,6 +78,9 @@ public class NFCScan extends AppCompatActivity {
 
     }
 
+    /**
+     * Allows the connection to a .JSON file
+     */
     private void jsonParse() {
         String url = "https://api.myjson.com/bins/irrr8";
 

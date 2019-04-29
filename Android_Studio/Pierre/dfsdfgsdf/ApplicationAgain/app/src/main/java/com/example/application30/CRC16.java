@@ -3,9 +3,6 @@ package com.example.application30;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-/**
- * Created by Thomas HOURDIN on 10/07/2015.
- */
 public class CRC16 {
 
     private static int[] CRC16Table = {
