@@ -1,0 +1,69 @@
+    NfcAdapter nfcAdapter;
+    private TextView txtTag;
+    private TextView mTextViewResult;
+    private RequestQueue mQueue;
+
+    public static final String TAG = "NfcDemo";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nfcscan);
+
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        txtTag = findViewById(R.id.txtTag);
+        mTextViewResult = findViewById(R.id.text_view_result);
+        Button buttonEmprunter = findViewById(R.id.button_emprunter);
+
+        mQueue = Volley.newRequestQueue(this);
+
+        buttonEmprunter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jsonParse();
+            }
+        });
+
+        if(nfcAdapter == null) {
+            Toast.makeText(this, "NFC indisponible sur ce Smartphone, utiliser le QR Code", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
+    }
+
+    /**
+     * Allows the connection to a .JSON file
+     */
+    private void jsonParse() {
+        String url = "https://api.myjson.com/bins/irrr8";
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray jsonArray = response.getJSONArray("employees");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject employee = jsonArray.getJSONObject(i);
+
+                                String firstName = employee.getString("firstname");
+                                int age = employee.getInt("age");
+                                String mail = employee.getString("mail");
+
+                                mTextViewResult.append(firstName + ",\n" + age + " ans,\n" + mail + "\n\n");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        mQueue.add(request);
+
+    }
