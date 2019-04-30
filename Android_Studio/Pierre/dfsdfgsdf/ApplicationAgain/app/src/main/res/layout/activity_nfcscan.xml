@@ -8,25 +8,25 @@
 
     <TextView
         android:id="@+id/txtTag"
-        android:layout_width="388dp"
-        android:layout_height="111dp"
+        android:layout_width="257dp"
+        android:layout_height="73dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="36sp"
+        android:fontFamily="monospace"
+        android:text="Scanner un Tag"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <TextView
         android:id="@+id/text_view_result"
-        android:layout_width="386dp"
-        android:layout_height="283dp"
+        android:layout_width="334dp"
+        android:layout_height="284dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -35,10 +35,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/button_emprunter"
@@ -48,7 +48,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/black"
         android:text="@string/Emprunter"
+        android:textColor="@android:color/holo_green_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

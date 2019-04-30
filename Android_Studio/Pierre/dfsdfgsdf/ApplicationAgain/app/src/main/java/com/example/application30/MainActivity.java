@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword) {
-        if ((userName.equals("")) && (userPassword.equals(""))) {
+        if ((userName.equals("Julio")) && (userPassword.equals("12345"))) {
             Intent intent = new Intent(MainActivity.this, InterfaceNFCQR.class);
             startActivity(intent);
         } else {

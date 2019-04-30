@@ -1,5 +1,6 @@
 package com.example.application30;
 
+import android.nfc.tech.NfcV;
 import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,9 +28,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -38,19 +40,29 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class NFCScan extends AppCompatActivity {
 
 
+    private boolean tagReaded;
     NfcAdapter nfcAdapter;
-    private TextView txtTag;
+    ToggleButton tglReadWrite;
+    TextView txtTag;
+    EditText txtTagContent;
+    //TextView txtID;
     private TextView mTextViewResult;
     private RequestQueue mQueue;
 
+
+
     public static final String TAG = "NfcDemo";
+
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +70,14 @@ public class NFCScan extends AppCompatActivity {
         setContentView(R.layout.activity_nfcscan);
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+
+        //txtID = findViewById(R.id.txtId);
+
         txtTag = findViewById(R.id.txtTag);
         mTextViewResult = findViewById(R.id.text_view_result);
         Button buttonEmprunter = findViewById(R.id.button_emprunter);
 
         mQueue = Volley.newRequestQueue(this);
-
         buttonEmprunter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +86,7 @@ public class NFCScan extends AppCompatActivity {
         });
 
         if(nfcAdapter == null) {
-            Toast.makeText(this, "NFC indisponible sur ce Smartphone", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "NFC indisponible sur ce Smartphone, utiliser le QR Code", Toast.LENGTH_LONG).show();
             finish();
         }
 
@@ -122,6 +136,7 @@ public class NFCScan extends AppCompatActivity {
         super.onResume();
 
         if (!nfcAdapter.isEnabled()) {
+            //Toast.makeText(getApplicationContext(), "Vous devez activer la fonction NFC de votre smartphone pour utiliser cette application.", Toast.LENGTH_LONG).show();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(NFCScan.this);
             builder.setTitle("NFC est désactivé");
@@ -134,7 +149,9 @@ public class NFCScan extends AppCompatActivity {
             builder.show();
         }
 
-        enableForegroundDispatcher();
+
+
+            enableForegroundDispatcher();
     }
 
     @Override
@@ -151,21 +168,37 @@ public class NFCScan extends AppCompatActivity {
         super.onNewIntent(intent);
 
         if(intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
-            Toast.makeText(this, "Tag Scanné!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "NFC intent!", Toast.LENGTH_LONG).show();
+
             {
                 Parcelable[] parcelables = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
                 if(parcelables != null && parcelables.length > 0)
                 {
-                    readTextFromMessage((NdefMessage)parcelables[0]);
 
+                    readTextFromMessage((NdefMessage)parcelables[0]);
+                    TagID(intent);
                 }
+
                 else {
 
                     Toast.makeText(this, "No NDEF messages found!", Toast.LENGTH_LONG).show();
                 }
             }
+
         }
+    }
+
+    private void TagID(Intent intent){
+
+        if(intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
+            if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(getIntent().getAction())) {
+                Tag tag = getIntent().getParcelableExtra(NfcAdapter.EXTRA_TAG);
+                //Toast.makeText(this, Arrays.toString(tag.getId()), Toast.LENGTH_LONG).show();
+                mTextView.setText(Arrays.toString(tag.getId()));
+            }
+        }
+
     }
 
     private void readTextFromMessage(NdefMessage ndefMessage) {
@@ -178,13 +211,17 @@ public class NFCScan extends AppCompatActivity {
 
             String tagContent = getTextFromNdefRecord(ndefRecord);
 
+
             txtTag.setText(tagContent);
+
+
         }
         else {
 
             Toast.makeText(this, "No NDEF records found!", Toast.LENGTH_LONG).show();
         }
     }
+
 
 
 
@@ -220,12 +257,17 @@ public class NFCScan extends AppCompatActivity {
 
             tagContent = new String(payload, languageSize + 1, payload.length - languageSize - 1, textEncoding);
 
-        } catch (UnsupportedEncodingException e) {
+        }catch (UnsupportedEncodingException e) {
             Log.e("getTextFromNdef", e.getMessage(), e);
         }
 
         return tagContent;
     }
+
+
+
+
+
 }
 
 
