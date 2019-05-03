@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-
 public class MainActivity extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword) {
-        if ((userName.equals("Julio")) && (userPassword.equals("12345"))) {
+        if ((userName.equals("")) && (userPassword.equals(""))) {
             Intent intent = new Intent(MainActivity.this, InterfaceNFCQR.class);
             startActivity(intent);
         } else {
