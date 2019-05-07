@@ -29,11 +29,13 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -44,7 +46,9 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class NFCScan extends AppCompatActivity {
 
@@ -78,6 +82,7 @@ public class NFCScan extends AppCompatActivity {
         Button buttonEmprunter = findViewById(R.id.button_emprunter);
 
         mQueue = Volley.newRequestQueue(this);
+
         buttonEmprunter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,14 +101,12 @@ public class NFCScan extends AppCompatActivity {
      * Allows the connection to a .JSON file
      */
     private void jsonParse() {
-        String url = "https://api.myjson.com/bins/irrr8";
-
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+        /*JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray jsonArray = response.getJSONArray("employees");
+                            JSONArray jsonArray = response.getJSONArray("utilisateur");
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject employee = jsonArray.getJSONObject(i);
@@ -123,9 +126,38 @@ public class NFCScan extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
             }
-        });
+        });*/
 
-        mQueue.add(request);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.16.37.120/Script_Serveur.php", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+                    for(int i=0;i<jsonArray.length();i++){
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        String id = jsonObject.getString("id");
+                        String nom = jsonObject.getString("nom");
+                        mTextViewResult.setText(id + " " + nom);
+                    }
+                }catch(JSONException e){
+                    mTextViewResult.setText(e.toString());
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                mTextViewResult.setText(error.toString());
+            }
+        }){
+            HashMap<String, String> params = new HashMap<>();
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                params.put("id", "1");
+                return params;
+            }
+        };
+
+        mQueue.add(stringRequest);
 
     }
 

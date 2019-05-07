@@ -33,7 +33,7 @@ public class CameraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcodescanner);
-        surfaceView = (SurfaceView) findViewById(R.id.camerapreview);
+        surfaceView = findViewById(R.id.camerapreview);
 
         barcodeDetector = new BarcodeDetector.Builder(this)
                 .setBarcodeFormats(Barcode.QR_CODE).build();

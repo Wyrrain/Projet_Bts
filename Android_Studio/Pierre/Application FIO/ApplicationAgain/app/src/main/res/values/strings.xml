@@ -10,4 +10,5 @@
     <string name="explanation" />
     <string name="viser_le_qr_code">Viser le QR Code</string>
     <string name="Emprunter">Emprunter</string>
+    <string name="Scanner_un_Tag">Scanner un Tag</string>
 </resources>
