@@ -27,28 +27,31 @@ public class MainActivity extends AppCompatActivity {
         Info = findViewById(R.id.btnOublie);
         Login = findViewById(R.id.loginBtn);
 
-        Login.setOnClickListener(new View.OnClickListener() {
+
+        /*Login.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
+                onLogin(view);
+
 
 
             }
-        });
+        });*/
 
-        Login.setOnClickListener(new View.OnClickListener() {
+       /* Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate(Email.getText().toString(), Password.getText().toString());
 
             }
-        });
+        });*/
 
 
     }
 
-    private void validate(String userName, String userPassword) {
-        if ((userName.equals("")) && (userPassword.equals(""))) {
+    /*private void validate(String userName, String userPassword) {
+        if ((userName.equals("Julio")) && (userPassword.equals("12345"))) {
             Intent intent = new Intent(MainActivity.this, InterfaceNFCQR.class);
             startActivity(intent);
         } else {
@@ -66,14 +69,41 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }*/
+
+
+    public void onLogin(View view) {
+        String username = Email.getText().toString();
+        String mdp = Password.getText().toString();
+        String type = "login";
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.execute(type, username, mdp);
+
+
+        /*if ((username.equals(Email)) && (mdp.equals(Password))) {
+            Intent intent = new Intent(MainActivity.this, InterfaceNFCQR.class);
+            startActivity(intent);
+        }else {
+
+            Counter--;
+
+            Info.setText("Nb d'essais " + String.valueOf(Counter));
+
+
+            if (Counter == 0) {
+
+                Login.setEnabled(false);
+                Info.setText("Nb d'essais " + String.valueOf(Counter) + ". Compte bloqué, demandez un nouveau mot de passe");
+            }
+
+
+        }
     }
 
 
+    }*/
+
+
+    }
 }
-
-
-
-
-
-
-
