@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -39,11 +38,14 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC5v-uR0HzrNY3evw8sa7Lh2LZw1NmjU1M" />
+            android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".sdrgqsdfsx"
+            android:label="@string/title_activity_sdrgqsdfsx"></activity>
+        <activity
             android:name=".Position"
-            android:label="@string/title_activity_position"></activity>
+            android:label="@string/title_activity_position" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
