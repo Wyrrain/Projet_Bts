@@ -28,12 +28,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -44,7 +45,12 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+
+import static com.facebook.common.internal.ByteStreams.toByteArray;
+
 
 public class NFCScan extends AppCompatActivity {
 
@@ -54,7 +60,7 @@ public class NFCScan extends AppCompatActivity {
     ToggleButton tglReadWrite;
     TextView txtTag;
     EditText txtTagContent;
-    //TextView txtID;
+    TextView txtID;
     private TextView mTextViewResult;
     private RequestQueue mQueue;
 
@@ -71,13 +77,13 @@ public class NFCScan extends AppCompatActivity {
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
-        //txtID = findViewById(R.id.txtId);
-
+        txtID = findViewById(R.id.txtID);
         txtTag = findViewById(R.id.txtTag);
         mTextViewResult = findViewById(R.id.text_view_result);
         Button buttonEmprunter = findViewById(R.id.button_emprunter);
 
         mQueue = Volley.newRequestQueue(this);
+
         buttonEmprunter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,40 +98,37 @@ public class NFCScan extends AppCompatActivity {
 
     }
 
-    /**
-     * Allows the connection to a .JSON file
-     */
-    private void jsonParse() {
-        String url = "https://api.myjson.com/bins/irrr8";
-
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONArray jsonArray = response.getJSONArray("employees");
-
-                            for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject employee = jsonArray.getJSONObject(i);
-
-                                String firstName = employee.getString("firstname");
-                                int age = employee.getInt("age");
-                                String mail = employee.getString("mail");
-
-                                mTextViewResult.append(firstName + ",\n" + age + " ans,\n" + mail + "\n\n");
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+        private void jsonParse() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.16.37.120/Script_Serveur.php", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+                    for(int i=0;i<jsonArray.length();i++){
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        String id = jsonObject.getString("id");
+                        String nom = jsonObject.getString("nom");
+                        mTextViewResult.setText(id + " " + nom);
                     }
-                }, new Response.ErrorListener() {
+                }catch(JSONException e){
+                    mTextViewResult.setText(e.toString());
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
+                mTextViewResult.setText(error.toString());
             }
-        });
+        }){
+            HashMap<String, String> params = new HashMap<>();
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                params.put("id", "1");
+                return params;
+            }
+        };
 
-        mQueue.add(request);
+        mQueue.add(stringRequest);
 
     }
 
@@ -136,7 +139,6 @@ public class NFCScan extends AppCompatActivity {
         super.onResume();
 
         if (!nfcAdapter.isEnabled()) {
-            //Toast.makeText(getApplicationContext(), "Vous devez activer la fonction NFC de votre smartphone pour utiliser cette application.", Toast.LENGTH_LONG).show();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(NFCScan.this);
             builder.setTitle("NFC est désactivé");
@@ -189,17 +191,18 @@ public class NFCScan extends AppCompatActivity {
         }
     }
 
+
     private void TagID(Intent intent){
 
         if(intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
-            if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(getIntent().getAction())) {
-                Tag tag = getIntent().getParcelableExtra(NfcAdapter.EXTRA_TAG);
-                //Toast.makeText(this, Arrays.toString(tag.getId()), Toast.LENGTH_LONG).show();
-                mTextView.setText(Arrays.toString(tag.getId()));
-            }
+                Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+                if(tag != null){
+                    txtID.setText(Arrays.toString(tag.getId()));
+                }
         }
 
     }
+
 
     private void readTextFromMessage(NdefMessage ndefMessage) {
 
@@ -221,6 +224,29 @@ public class NFCScan extends AppCompatActivity {
             Toast.makeText(this, "No NDEF records found!", Toast.LENGTH_LONG).show();
         }
     }
+
+    /*private void readTextFromMessage(NfcV nfcVMessage) {
+
+        NfcVRecord[] nfcVRecords = nfcVMessage.getRecords();
+
+        if(ndefRecords != null && ndefRecords.length > 0) {
+
+            NdefRecord ndefRecord = ndefRecords[0];
+
+            String tagContent = getTextFromNdefRecord(ndefRecord);
+
+
+            txtTag.setText(tagContent);
+
+
+        }
+        else {
+
+            Toast.makeText(this, "No NDEF records found!", Toast.LENGTH_LONG).show();
+        }
+    }*/
+
+
 
 
 

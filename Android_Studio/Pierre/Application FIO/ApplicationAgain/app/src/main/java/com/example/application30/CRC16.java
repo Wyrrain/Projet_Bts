@@ -61,7 +61,7 @@ public class CRC16 {
 
         byte[] crcBytes = ByteBuffer.allocate(4).putInt(crc).array();
 
-        /*** ON INVERSE L'ORDRE DES OCTETS POUR ETRE COMPATIBLE AVEC L'APPLI WINDOWS ***/
+        /** ON INVERSE L'ORDRE DES OCTETS POUR ETRE COMPATIBLE AVEC L'APPLI WINDOWS **/
 
         byte[] crcBytesInverse = new byte[4];
 

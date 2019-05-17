@@ -27,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         Info = findViewById(R.id.btnOublie);
         Login = findViewById(R.id.loginBtn);
 
+
         Login.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
+
 
 
             }
@@ -69,11 +71,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
-
-
-
-
-
-
-
+    }
