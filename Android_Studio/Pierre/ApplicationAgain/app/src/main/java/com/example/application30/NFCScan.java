@@ -183,14 +183,14 @@ public class NFCScan extends AppCompatActivity {
 
                 if(parcelables != null && parcelables.length > 0)
                 {
-
                     readTextFromMessage((NdefMessage)parcelables[0]);
                     TagID(intent);
                 }
 
                 else {
 
-                    Toast.makeText(this, "No NDEF messages found!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(this, "No NDEF messages found!", Toast.LENGTH_LONG).show();
+                    mTextViewResult.setText("C'est objet n'est pas empruntable");
                 }
             }
 
