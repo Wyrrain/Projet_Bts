@@ -1,0 +1,259 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e369d57b4a1be6b8001ff01ea49c62c\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\8c095e6bb7d027c7a64a5598c27a2e80\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-17.0.2.aar\a36990c7b49792adc6bd1b829a54dc78\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-16.0.0.aar\ee38b8d029fc4a1c9c666266ddfdfd4b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3bde1a3fd70f67d3ff8eaa277e12fb9e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-16.0.0.aar\95c254314750fb81b796bdd260525539\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\bb9bd27fa28fba0c46e2ab91998a8b8f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+	package
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:4:5-40
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:1-45:12
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.NFC
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:6:5-62
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:6:22-59
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:7:5-64
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:7:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:8:5-65
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:8:22-63
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:9:5-69
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:9:19-67
+application
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:12:5-42:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e369d57b4a1be6b8001ff01ea49c62c\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e369d57b4a1be6b8001ff01ea49c62c\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\8c095e6bb7d027c7a64a5598c27a2e80\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\8c095e6bb7d027c7a64a5598c27a2e80\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-17.0.2.aar\a36990c7b49792adc6bd1b829a54dc78\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-17.0.2.aar\a36990c7b49792adc6bd1b829a54dc78\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-16.0.0.aar\ee38b8d029fc4a1c9c666266ddfdfd4b\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-16.0.0.aar\ee38b8d029fc4a1c9c666266ddfdfd4b\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-16.0.0.aar\95c254314750fb81b796bdd260525539\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-16.0.0.aar\95c254314750fb81b796bdd260525539\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\bb9bd27fa28fba0c46e2ab91998a8b8f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\bb9bd27fa28fba0c46e2ab91998a8b8f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:15:9-41
+	tools:ignore
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:19:9-48
+	android:roundIcon
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:18:9-40
+activity#com.example.application30.NFCScan
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:21:9-44
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:21:19-42
+activity#com.example.application30.InterfaceNFCQR
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:22:9-51
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:22:19-49
+activity#com.example.application30.CameraActivity
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:23:9-51
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:23:19-49
+activity#com.example.application30.MainActivity
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:25:9-36:20
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:25:19-47
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.nfc.action.NDEF_DISCOVERED+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER+data:mimeType:application/com.example.application30
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:26:13-35:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:27:17-69
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:27:25-66
+action#android.nfc.action.NDEF_DISCOVERED
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:28:25-74
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:29:27-73
+data
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:30:17-83
+	android:mimeType
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:30:23-79
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:34:27-74
+meta-data#com.google.android.gms.vision.DEPENDENCIES
+ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:38:9-40:38
+	android:value
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml:39:13-70
+uses-sdk
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e369d57b4a1be6b8001ff01ea49c62c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\4e369d57b4a1be6b8001ff01ea49c62c\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\8c095e6bb7d027c7a64a5598c27a2e80\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-17.0.2.aar\8c095e6bb7d027c7a64a5598c27a2e80\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-17.0.2.aar\a36990c7b49792adc6bd1b829a54dc78\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-17.0.2.aar\a36990c7b49792adc6bd1b829a54dc78\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-16.0.0.aar\ee38b8d029fc4a1c9c666266ddfdfd4b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-16.0.0.aar\ee38b8d029fc4a1c9c666266ddfdfd4b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3bde1a3fd70f67d3ff8eaa277e12fb9e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3bde1a3fd70f67d3ff8eaa277e12fb9e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-16.0.0.aar\95c254314750fb81b796bdd260525539\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-phenotype-16.0.0.aar\95c254314750fb81b796bdd260525539\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\bb9bd27fa28fba0c46e2ab91998a8b8f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\bb9bd27fa28fba0c46e2ab91998a8b8f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\pierre.gorge\Documents\Android_Studio\ApplicationAgain\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\16f53d4663741b945cd5ac7058b64445\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\45a52db94c9c58c1c4b8827e5c776447\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\a2ae8777f6937a617525699d30744acf\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\dbb98454fdfe79843cf30d628c20589a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\ad4d573b0e7e898c5c89c4e73a8dc53a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\224f8a394c8be4befd0a01bfffdda2e9\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\108657853f3f4f9ae2f53207a1d895af\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\b6016e5b4efa6125fcdbf07aa96a7375\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\0c7c0bb607791885f574d1f3fca07239\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\6b272f8ac708bb4a492921ad93face18\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\ccf6f11ea32ed116d93138f297803229\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\d51357f2f142eca7b5af5dc03ec5e001\AndroidManifest.xml:24:13-58
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\pierre.gorge\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\9ae2dd3e9e07465f31c0d73f7964bcb9\AndroidManifest.xml:26:13-58
