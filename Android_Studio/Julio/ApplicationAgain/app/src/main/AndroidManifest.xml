@@ -41,9 +41,6 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".sdrgqsdfsx"
-            android:label="@string/title_activity_sdrgqsdfsx"></activity>
-        <activity
             android:name=".Position"
             android:label="@string/title_activity_position" />
         <activity android:name=".MainActivity">
