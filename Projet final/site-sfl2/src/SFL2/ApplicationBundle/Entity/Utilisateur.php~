@@ -1,0 +1,80 @@
+<?php
+
+namespace SFL2\ApplicationBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Utilisateur
+ *
+ * @ORM\Table(name="utilisateur")
+ * @ORM\Entity(repositoryClass="SFL2\ApplicationBundle\Repository\UtilisateurRepository")
+ */
+class Utilisateur
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fonction", type="string", length=255, nullable=true)
+     */
+    private $fonction;   
+    
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=45, nullable=true)
+     */
+    private $login;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motdepasse", type="string", length=45, nullable=true)
+     */
+    private $motdepasse;
+    
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commentaires", type="string", length=255, nullable=true)
+     */
+    private $commentaires;
+    
+    
+    /*** Ajouté par M. GUILLOU */
+    
+    public function getPrenomNom()
+    {
+        return $this->prenom.' '.$this->nom;
+    }
+    
+    public function getNomPrenom()
+    {
+        return $this->nom.' '.$this->prenom;
+    }
+}

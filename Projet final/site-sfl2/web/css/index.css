@@ -1,0 +1,28 @@
+
+.ubh-jumbotron-heading-account-label {
+  font-size: 1.2em;
+  font-variant: small-caps;
+  font-weight: 600;
+  color: #000000;
+}
+.ubh-jumbotron-heading-account-value {
+  font-size: 1.3em;
+  font-variant: small-caps;
+  font-weight: 600;
+  color: #e2b80d;
+}
+.jumbotron hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.ubh-jumbotron-label {
+  font-size: 1.10em;
+  font-variant: small-caps;
+  font-weight: 600;
+  color: #000000;
+}
+.ubh-jumbotron-value {
+    font-size: 1.2em;
+    font-weight: 575;
+    color: #E2B80D;
+}

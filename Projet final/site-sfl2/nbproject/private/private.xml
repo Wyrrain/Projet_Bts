@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Utilisateur/index.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Utilisateur/modification.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Form/EmpruntType.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Emprunt/index.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Connexion/connexion.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/config/services.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Repository/EmpruntRepository.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/config/security.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/web/connexionbdd.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/config/parameters.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Emprunt/add.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Form/UtilisateurType.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Repository/ArticleRepository.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Form/ConnexionType.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Utilisateur/add.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Repository/UtilisateurRepository.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Controller/LocalisationController.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Repository/ConnexionRepository.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/Resources/views/connexion.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Controller/EmpruntController.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/config/routing_dev.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/app/config/config.yml</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Controller/UtilisateurController.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/web/outputxml.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Controller/SecurityController.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Entity/Article.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Resources/views/Localisation/localisation.html.twig</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp64/www/site-sfl2/src/SFL2/ApplicationBundle/Entity/Emprunt.php</file>
+        </group>
+    </open-files>
+</project-private>

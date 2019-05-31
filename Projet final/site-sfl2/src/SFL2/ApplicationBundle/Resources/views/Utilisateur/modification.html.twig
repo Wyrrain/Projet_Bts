@@ -1,0 +1,101 @@
+{{include("base.html.twig")}}
+{% block  body %}
+    
+
+    <h1>Ajout d'un utilisateur</h1>
+
+    <div clas="well">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+        {{ form_errors(form)}}
+
+
+
+      
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.nom) }}
+            
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Nom de l'utilisateur</span>
+        </div>
+        
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user-o"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.prenom) }}
+            
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Prénom de l'utilisateur</span>
+        </div>
+            
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.fonction) }}
+            
+                {{ form_widget(form.fonction, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Fonction de l'utilisateur</span>
+        </div>
+         
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.numero) }}
+            
+                {{ form_widget(form.numero, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">numero de l'utilisateur</span>
+        </div>                    
+        
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.mail) }}
+            
+                {{ form_widget(form.mail, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Mail de l'utilisateur</span>
+        </div>
+            
+        <div class="form-group">
+            {{ form_widget(form.ajouter, {'attr': {'class': 'btn btn-secondary'}}) }}
+        </div>
+            
+        
+
+        {{ form_rest(form) }}
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock body %}

@@ -1,0 +1,87 @@
+{# templates/Emprunt/emprunt.html.twig #}
+{{include("base.html.twig")}}
+
+{% block  body %}
+    <div class="container-fluid">
+        <h1 style="text-align: center">Gestion des Emprunts</h1>
+        {% if is_granted('ROLE_ADMIN') %}
+            <p>
+            <a href="emprunts/add" class="btn btn-success btn-md" role="button" aria-disabled="true">Ajouter un emprunt</a>
+            </p>
+        {% endif %}
+        
+        <div class="table-responsive">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col1">id</th>
+                    <th scope="col">Article</th>
+                    <th scope="col">Marque</th>
+                    <th scope="col">Début de l'emprunt</th>
+                    <th scope="col">Fin de l'emprunt</th>
+                    <th scope="col">Emprunté par :</th>
+                    <th scope="col">Modification</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                {% for emprunt in emprunts %}
+                    <tr>
+                        <td>{{emprunt.id}}</td>
+                        <td>{{emprunt.article.nom}}</td>
+                        <td>{{emprunt.article.marque}}</td>
+                        <td>{{emprunt.debut |date('d-m-Y')}}</td>
+                        <td>{{emprunt.fin |date('d-m-Y')}}</td>
+                        <td>{{emprunt.utilisateur.nom}}</td>
+                        
+
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <td><a href="{{ path('sfl2_emprunts_edit', { 'id': emprunt.id }) }}" class="btn btn-success btn-sm" role="button" aria-disabled="true">modifier</a>
+                         
+                            <a href="" class="btn btn-success btn-sm" role="button" aria-disabled="true" data-toggle="modal" data-target="#delete_{{emprunt.id}}">supprimer</a>
+
+                        </td>
+                        {%endif%}
+                    </tr>
+                    
+                <div class="modal fade" id="delete_{{emprunt.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Supression</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Voulez-vous vraiment supprimer cet emprunt?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Non</button>
+                                <a href="{{ path('sfl2_emprunts_del', { 'id': emprunt.id }) }}" class="btn btn-success" role="button" aria-disabled="true">Oui</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="col1">id</th>
+                    <th scope="col">Article</th>
+                    <th scope="col">Marque</th>
+                    <th scope="col">Début de l'emprunt</th>
+                    <th scope="col">Fin de l'emprunt</th>
+                    <th scope="col">Emprunté par :</th>
+                    <th scope="col">Modification</th>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+        
+    </div>
+
+    <!-- Modal -->
+
+{% endblock  body %}
