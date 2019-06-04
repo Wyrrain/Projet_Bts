@@ -16,12 +16,14 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class MainActivity extends AppCompatActivity {
     private EditText Email;
     private EditText Password;
     private Button Info;
     private Button Login;
     private int Counter = 10;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
 
-
-            Login.setOnClickListener(new View.OnClickListener(){
+            this.Login.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     validate();
@@ -58,9 +59,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
+
+
     private void validate(){
-        final String login = Email.getText().toString();
-        final String motdepasse = Password.getText().toString();
+        final String username = Email.getText().toString();
+        final String password = Password.getText().toString();
 
         Response.Listener<String> responseListener = new Response.Listener<String>() {
             @Override
@@ -70,8 +74,10 @@ public class MainActivity extends AppCompatActivity {
                     boolean success = jsonObject.getBoolean("success");
 
                     if(success){
-                        /*String login = jsonObject.getString("login");
-                        String motdepasse = jsonObject.getString("motdepasse");*/
+                        /*String name = jsonObject.getString("name");
+                        int age = jsonObject.getInt("age");
+                        String nom = jsonObject.getString("nom");
+                        String email = jsonObject.getString("email");*/
 
                         Toast.makeText(MainActivity.this,"Login success ! ", Toast.LENGTH_SHORT).show();
 
@@ -100,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         try {
-            LoginRequest loginRequest = new LoginRequest(login, motdepasse, InfoServer.getIp(), responseListener);
+            LoginRequest loginRequest = new LoginRequest(username, password, InfoServer.getIp(), responseListener);
             RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
             queue.add(loginRequest);
         }catch (Exception e){
