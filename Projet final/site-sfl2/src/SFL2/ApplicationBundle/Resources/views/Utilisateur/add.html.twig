@@ -1,0 +1,121 @@
+{{include("base.html.twig")}}
+{% block  body %}
+    
+    {% if is_granted('ROLE_ADMIN')%}
+        <h1 style="text-align: center; color: white">Ajout d'un utilisateur</h1>
+
+    <div clas="well">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+        {{ form_errors(form)}}
+
+
+
+      
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.nom) }}
+            
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Nom de l'utilisateur</span>
+        </div>
+        
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user-o"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.prenom) }}
+            
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Prénom de l'utilisateur</span>
+        </div>
+            
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.fonction) }}
+            
+                {{ form_widget(form.fonction, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Fonction de l'utilisateur</span>
+        </div>
+         
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.login) }}
+            
+                {{ form_widget(form.login, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Identifiant de l'utilisateur</span>
+        </div>                    
+        
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.motdepasse) }}
+            
+                {{ form_widget(form.motdepasse, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Mot de passe de l'utilisateur</span>
+        </div>
+            
+        <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.commentaires) }}
+            
+                {{ form_widget(form.commentaires, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted" style="color:white">Commentaires sur l'utilisateur</span>
+        </div>
+            
+            
+        <div class="form-group">
+            {{ form_widget(form.ajouter, {'attr': {'class': 'btn btn-success'}}) }}
+        </div>
+            
+        
+
+        {{ form_rest(form) }}
+
+        {{ form_end(form) }}
+    </div>
+    {%else%}
+        <meta http-equiv="refresh" content="0;URL={{path('sfl2_homepage')}}">
+    {%endif%}
+    
+
+{% endblock body %}

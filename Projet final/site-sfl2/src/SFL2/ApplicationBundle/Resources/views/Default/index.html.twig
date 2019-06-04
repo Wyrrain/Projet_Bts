@@ -1,0 +1,73 @@
+{# src/SFL2/ApplicationBundle/Resources/views/Default/index.html.twig #}
+{{include("base.html.twig")}}
+<!DOCTYPE html>
+<html>
+	
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Accueil{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% endblock %}
+        
+    </head>
+    <body>
+        {% block body %}
+            <div class="container-fluid">
+                <img style="width : 170px; float:right"src="https://cdn.discordapp.com/attachments/337935730045222923/582911965765173248/Police_noire-sans_arriere_plan.png"/>
+                <h1 style="text-align: center; ">Administration des emprunts</h1>
+                
+            </div>
+            
+                <div class="jumbotron">
+                <h1 class="display-4">Utilisateurs</h1>
+                              
+                <hr class="my-4">
+                        <ul class="list-group list-group-flush">
+                   
+                    </ul>
+                <p>Aller à la page gestion des utilisateurs: </p>
+                <p class="lead">
+                    <a class="btn btn-success btn-lg" href="utilisateurs" role="button">Gestion des utilisateurs</a>
+                </p>
+                 {% for user in utilisateurs %}
+                
+                        <li class="list-group-item">{{user.getNomPrenom()}}</li>
+                        
+                 {%endfor%}
+                </div>
+                
+                <div class="jumbotron">
+                <h1 class="display-4">Emprunts</h1>
+                <hr class="my-4">
+                <p>Aller à la page gestion des emprunts: </p>
+                <p class="lead">
+                    <a class="btn btn-success btn-lg" href="emprunt" role="button">Gestion des emprunts</a>
+                </p>
+                {% for emp in emprunt %}
+                
+                        <li class="list-group-item">{{emp.utilisateur.getNomPrenom()}} <i class="fas fa-arrow-right"></i>  {{emp.article.getNomMarque()}}</li>
+                        
+                 {%endfor%}
+                </div>
+                
+                <div class="jumbotron">
+                <h1 class="display-4">Localisation</h1>
+                <hr class="my-4">
+                <p>Aller à la page de localisation: </p>
+                <p class="lead">
+                    <a class="btn btn-success btn-lg" href="localisation" role="button">Localisation</a>
+                </p>
+                </div>
+           
+            
+        {% endblock %}
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        {% endblock %}
+    	
+    </body>
+    
+</html>

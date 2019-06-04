@@ -1,0 +1,50 @@
+sfl2_firstpage:
+    path:     /
+    defaults: { _controller: SFL2ApplicationBundle:Default:index }
+    
+sfl2_homepage:
+    path: /accueil
+    defaults: {_controller: SFL2ApplicationBundle:Default:accueil}
+ 
+sfl2_utilisateurs_index:
+    path: /utilisateurs
+    defaults: {_controller: SFL2ApplicationBundle:Utilisateur:index}
+
+sfl2_utilisateurs_add:
+    path: /utilisateurs/add
+    defaults: {_controller: SFL2ApplicationBundle:Utilisateur:add}
+    
+sfl2_utilisateurs_del:
+    path: /utilisateurs/{id}/delete
+    defaults: {_controller : SFL2ApplicationBundle:Utilisateur:delete}
+
+sfl2_utilisateurs_edit:
+    path: /utilisateurs/{id}/edit
+    defaults: {_controller : SFL2ApplicationBundle:Utilisateur:edit}
+    
+sfl2_emprunts_index:
+    path: /emprunts
+    defaults: {_controller: SFL2ApplicationBundle:Emprunt:index }
+
+sfl2_emprunts_add:
+    path: /emprunts/add
+    defaults: {_controller: SFL2ApplicationBundle:Emprunt:add }
+    
+sfl2_emprunts_del:
+    path: /emprunts/{id}/delete
+    defaults: {_controller: SFL2ApplicationBundle:Emprunt:delete }    
+
+sfl2_emprunts_edit:
+    path: /emprunts/{id}/edit
+    defaults: {_controller: SFL2ApplicationBundle:Emprunt:edit }
+    
+sfl2_localisation:
+    path: /localisation
+    defaults: {_controller: SFL2ApplicationBundle:Localisation:localisation}
+    
+sfl2_login:
+    path: /login
+    defaults: {_controller: SFL2ApplicationBundle:Security:login}
+    
+sfl2_logout:
+     path: /logout
