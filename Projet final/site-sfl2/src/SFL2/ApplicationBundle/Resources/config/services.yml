@@ -1,0 +1,4 @@
+services:
+#    sfl2_application.example:
+#        class: SFL2\ApplicationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

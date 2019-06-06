@@ -1,0 +1,91 @@
+{{include("base.html.twig")}}
+
+{% block  body %}
+    {% if is_granted('ROLE_ADMIN')%}
+    <div class="container-fluid">
+
+        <h1 style="text-align: center">Ajouter un emprunt</h1>
+
+        <div clas="well">
+            
+            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+            {{ form_errors(form)}}
+            
+            <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.debut) }}
+            
+                {{ form_widget(form.debut, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Début de l'emprunt</span>
+        </div>
+            
+            <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.fin) }}
+            
+                {{ form_widget(form.fin, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Fin de l'emprunt</span>
+        </div>
+            
+            <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.article) }}
+            
+                {{ form_widget(form.article, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Choisir l'article</span>
+        </div>
+            
+            <div class="form-group">
+            <label></label> 
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                {{ form_errors(form.utilisateur) }}
+            
+                {{ form_widget(form.utilisateur, {'attr': {'class': 'form-control '}}) }}
+            </div>                              
+            <span id="HelpBlock" class="form-text text-muted">Choisir l'emprunteur</span>
+        </div>
+            
+           
+            <div class="form-group">
+            {{ form_widget(form.ajouter, {'attr': {'class': 'btn btn-success'}}) }}
+            </div>
+            
+            
+            
+            {{ form_rest(form) }}
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+     {%else%}
+        <meta http-equiv="refresh" content="0;URL={{path('sfl2_homepage')}}">
+    {%endif%}
+
+{% endblock body %}

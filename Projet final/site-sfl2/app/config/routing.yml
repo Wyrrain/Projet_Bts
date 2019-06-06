@@ -1,0 +1,3 @@
+sfl2:
+    resource: '@SFL2ApplicationBundle/Resources/config/routing.yml'
+    prefix: /

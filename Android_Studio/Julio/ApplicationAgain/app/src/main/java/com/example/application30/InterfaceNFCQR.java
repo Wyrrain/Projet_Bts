@@ -43,8 +43,6 @@ public class InterfaceNFCQR extends AppCompatActivity {
 
 
 
-
-
     }
 
     public void ouvrirInterfaceNFC() {

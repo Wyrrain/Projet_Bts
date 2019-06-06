@@ -1,0 +1,61 @@
+<?php
+
+namespace SFL2\ApplicationBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Emprunt
+ *
+ * @ORM\Table(name="emprunt")
+ * @ORM\Entity(repositoryClass="SFL2\ApplicationBundle\Repository\EmpruntRepository")
+ */
+class Emprunt
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="article_id", type="int", length=11, nullable=true)
+     */
+    private $article_id;
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="utilisateur_id", type="int", nullable=true)
+     */
+    private $utilisateur_id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="debut", type="date", nullable=true)
+     */
+    private $debut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fin", type="date", nullable=true)
+     */
+    private $fin;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="SFL2\ApplicationBundle\Entity\Utilisateur")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+    
+    
+
+    
+}
